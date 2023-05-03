@@ -1,9 +1,17 @@
 package com.exemplo.demo.entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tb_produto")
 public class Produto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id;
     private String nome;
     private double preco;
+    @ManyToOne
+    @JoinColumn(name = "fk_id_departamento")
     private Departamento departamento;
 
     public Produto() {

@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class Inicio {
     @GetMapping
     public String getMsg(){
-        return "Bem vindo ao exemplo de api com spring, endpoints disponiveis: /produtos /departamentos ";
+        return "Bem vindo ao exemplo de api com spring, endpoints disponiveis: /produtos /departamentos e /h2-console (banco de dados falso) ";
     }
 }
